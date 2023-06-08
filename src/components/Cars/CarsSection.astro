@@ -1,11 +1,19 @@
 ---
 import CarCard from "./CarCard.astro";
+
+const cars = await Astro.glob("../../../_posts/car/*.md");
 ---
 
 <div class="flex flex-wrap gap-10 py-24 justify-center bg-zinc-950">
-  <CarCard price="$999" carName="Lamborghini Huracan" />
-  <CarCard price="$999" carName="Lamborghini Huracan" />
-  <CarCard price="$999" carName="Lamborghini Huracan" />
-  <CarCard price="$999" carName="Lamborghini Huracan" />
-  <CarCard price="$999" carName="Lamborghini Huracan" />
+  {
+    cars.map((car) => (
+      <CarCard
+        price={"$" + car.frontmatter.price}
+        carName={car.frontmatter.make + " " + car.frontmatter.model}
+        modelYear={car.frontmatter.modelYear}
+        mileage={car.frontmatter.mileage}
+        transmission={car.frontmatter.transmission}
+      />
+    ))
+  }
 </div>

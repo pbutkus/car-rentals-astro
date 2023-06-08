@@ -1,7 +1,7 @@
 ---
 import Button from "../Button.astro";
 
-const { price, carName } = Astro.props;
+const { price, carName, modelYear, mileage, transmission } = Astro.props;
 ---
 
 <div class="w-1/4 bg-zinc-50 rounded-sm">
@@ -18,13 +18,13 @@ const { price, carName } = Astro.props;
     <div class="flex gap-4 p-4">
       <ul class="font-light">
         <li>Model year:</li>
-        <li>Engine:</li>
+        <li>Mileage:</li>
         <li>Transmission:</li>
       </ul>
       <ul class="font-base">
-        <li>2022</li>
-        <li>5.0 V10</li>
-        <li>Automatic</li>
+        <li>{modelYear}</li>
+        <li>{mileage}</li>
+        <li>{transmission}</li>
       </ul>
     </div>
     <Button href="#">RESERVE</Button>
