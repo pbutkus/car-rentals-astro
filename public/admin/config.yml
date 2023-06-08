@@ -9,10 +9,15 @@ collections:
     label: "Car"
     folder: "_posts/car"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{fields.identifier}}"
     fields:
-      - { label: "Make", name: "make", widget: string }
-      - { label: "Model", name: "model", widget: string }
+      - {
+          label: "Identifier (helps you diferentiate similar card, should be unique)",
+          name: "identifier",
+          widget: "string",
+        }
+      - { label: "Make", name: "make", widget: "string" }
+      - { label: "Model", name: "model", widget: "string" }
       - { label: "Model Year", name: "modelYear", widget: "number" }
       - { label: "Mileage", name: "mileage", widget: "number" }
       - { label: "Engine Size cm3", name: "engineSize", widget: "number" }
