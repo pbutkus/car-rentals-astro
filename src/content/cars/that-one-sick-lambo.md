@@ -1,5 +1,5 @@
 ---
-identifier: That one sick lambo
+title: That one sick lambo
 make: Lamborghini
 model: Huracan
 modelYear: 2022
