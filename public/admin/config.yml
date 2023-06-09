@@ -5,16 +5,26 @@ publish_mode: editorial_workflow
 media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 collections:
+  - name: "hero"
+    label: "Hero"
+    folder: "_posts/hero"
+    create: false
+    delete: false
+    slug: "{{slug}}"
+    fields:
+      - { label: "Heading", name: "heading", widget: "string" }
+      - { label: "Subheading", name: "subheading", widget: "string" }
   - name: "car"
     label: "Car"
-    folder: "_posts/car"
+    folder: "src/content/cars"
     create: true
     slug: "{{fields.identifier}}"
     fields:
       - {
-          label: "Identifier (helps you diferentiate similar card, should be unique)",
-          name: "identifier",
+          label: "Title",
+          name: "title",
           widget: "string",
+          hint: "Used to help you identify exact item you are looking for and as a part of URL",
         }
       - { label: "Make", name: "make", widget: "string" }
       - { label: "Model", name: "model", widget: "string" }

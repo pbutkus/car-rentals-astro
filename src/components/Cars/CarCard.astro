@@ -1,7 +1,7 @@
 ---
 import Button from "../Button.astro";
 
-const { price, carName, modelYear, mileage, transmission } = Astro.props;
+const { price, carName, modelYear, mileage, transmission, slug } = Astro.props;
 ---
 
 <div class="w-1/4 bg-zinc-50 rounded-sm">
@@ -27,6 +27,6 @@ const { price, carName, modelYear, mileage, transmission } = Astro.props;
         <li>{transmission}</li>
       </ul>
     </div>
-    <Button href="#">RESERVE</Button>
+    <Button href={slug}>RESERVE</Button>
   </div>
 </div>

@@ -1,9 +1,13 @@
+---
+import * as hero from "./_posts/hero/hero.md";
+---
+
 <div
   class="flex align-middle justify-center bg-center"
   style="background-image: url(/huracan.jpg)"
 >
   <div class="text-center p-48">
-    <h1 class="font-semibold text-3xl">CAR RENTALS</h1>
-    <h2 class="font-light">WE MAKE YOUR DREAMS COME TRUE</h2>
+    <h1 class="font-semibold text-3xl">{hero.frontmatter.heading}</h1>
+    <h2 class="font-light">{hero.frontmatter.subheading}</h2>
   </div>
 </div>
