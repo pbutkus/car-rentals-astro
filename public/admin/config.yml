@@ -7,7 +7,7 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 collections:
   - name: "hero"
     label: "Hero"
-    folder: "_posts/hero"
+    folder: "src/content/hero"
     create: false
     delete: false
     slug: "{{slug}}"
