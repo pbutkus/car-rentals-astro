@@ -1,4 +1,4 @@
 ---
-heading: "CAR RENTALS"
-subheading: "MAKING YOUR DREAMS COME TRUE"
+heading: "Unleash Your Luxury Journey"
+subheading: "Experience the Thrill of Driving Exclusivity"
 ---
