@@ -1,0 +1,25 @@
+---
+import * as aboutUs from "../content/about/about.md";
+---
+
+<div class="flex items-center p-6">
+  <div class="p-6">
+    <img src="/huracan.jpg" alt="Lamborghini Huracan" class="shadow-lg" />
+  </div>
+  <div class="flex flex-col p-6 gap-4">
+    <div>
+      <h1 class="font-semibold py-2 text-3xl">
+        {aboutUs.frontmatter.title}
+      </h1>
+      <div class="font-light">
+        {aboutUs.frontmatter.paragraphs.map((para: string) => <p>{para}</p>)}
+      </div>
+    </div>
+    <div>
+      <h3 class="font-semibold">Why Choose Us?</h3>
+      <ul class="font-light list-disc list-inside">
+        {aboutUs.frontmatter.whyChooseUsList.map((li: string) => <li>{li}</li>)}
+      </ul>
+    </div>
+  </div>
+</div>

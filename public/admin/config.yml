@@ -22,6 +22,19 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - label: "Thumbnail"
+        name: "thumbnail"
+        widget: "object"
+        summary: "{{fields.description}}"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Description", name: "description", widget: "string" }
+          - label: "Position"
+            name: "position"
+            widget: "select"
+            options:
+              - { label: "Left", value: false }
+              - { label: "Right", value: true }
       - label: "Paragraphs"
         name: "paragraphs"
         widget: "list"
