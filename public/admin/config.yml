@@ -25,10 +25,12 @@ collections:
       - label: "Paragraphs"
         name: "paragraphs"
         widget: "list"
+        summary: "{{fields.content}}"
         field: { label: "Content", name: "content", widget: "string" }
       - label: "Why Choose Us list"
         name: "whyChooseUsList"
         widget: "list"
+        summary: "{{fields.whyChooseUsListItem}}"
         field:
           {
             label: "Why Choose Us list item",
