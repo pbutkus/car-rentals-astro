@@ -1,5 +1,7 @@
 ---
-import * as hero from "../content/hero/hero.md";
+import { getEntry } from "astro:content";
+
+const hero = await getEntry("hero", "hero");
 ---
 
 <div
@@ -7,7 +9,7 @@ import * as hero from "../content/hero/hero.md";
   style="background-image: url(/huracan.jpg)"
 >
   <div class="text-center p-48">
-    <h1 class="font-semibold text-3xl">{hero.frontmatter.heading}</h1>
-    <h2 class="font-light">{hero.frontmatter.subheading}</h2>
+    <h1 class="font-semibold text-3xl">{hero.data.heading}</h1>
+    <h2 class="font-light">{hero.data.subheading}</h2>
   </div>
 </div>

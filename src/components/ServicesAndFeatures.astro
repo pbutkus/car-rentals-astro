@@ -1,7 +1,12 @@
 ---
-import * as servicesAndFeatures from "../content/services-and-features/services-and-features.md";
+import { getEntry } from "astro:content";
+
+const servicesAndFeatures = await getEntry(
+  "services-and-features",
+  "services-and-features"
+);
 ---
 
 <div class="p-6">
-  <h1>{servicesAndFeatures.frontmatter.title}</h1>
+  <h1>{servicesAndFeatures.data.title}</h1>
 </div>

@@ -1,20 +1,10 @@
 ---
+import { getCollection } from "astro:content";
 import CarCard from "./CarCard.astro";
 
-const cars = await Astro.glob("../../content/cars/*.md");
+const cars = await getCollection("cars");
 ---
 
 <div class="flex flex-wrap gap-10 py-24 justify-center bg-zinc-950">
-  {
-    cars.map((car) => (
-      <CarCard
-        price={"$" + car.frontmatter.price}
-        carName={`${car.frontmatter.make} ${car.frontmatter.model}`}
-        modelYear={car.frontmatter.modelYear}
-        mileage={car.frontmatter.mileage}
-        transmission={car.frontmatter.transmission}
-        slug={`#${car.frontmatter.identifier}`}
-      />
-    ))
-  }
+  {cars.map((car) => <CarCard car={car} />)}
 </div>
