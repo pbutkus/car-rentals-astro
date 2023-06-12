@@ -1,5 +1,9 @@
 ---
 title: About Us
+thumbnail:
+  image: /images/uploads/brayden-law-iblophwohje-unsplash.jpg
+  description: Lamborghini Huracan
+  position: left
 paragraphs:
   - At [Company Name], we are passionate about luxury cars and providing
     exceptional experiences. With years of expertise in the luxury car rental
