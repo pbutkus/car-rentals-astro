@@ -1,0 +1,13 @@
+---
+const { type, name, label } = Astro.props;
+---
+
+<div class="flex flex-col w-full">
+  <label class="font-light" for={name}>{label}</label>
+  <input
+    class="p-1 border-2 border-zinc-300 outline-none active:border-red-600 focus:border-red-600 focus:outline-red-300 focus:outline-offset-0 rounded-sm"
+    type={type}
+    name={name}
+    id={name}
+  />
+</div>

@@ -13,6 +13,7 @@ collections:
     fields:
       - { label: "Heading", name: "heading", widget: "string" }
       - { label: "Subheading", name: "subheading", widget: "string" }
+      - { label: "Background", name: "background", widget: "image" }
   - name: "about"
     label: "About Us"
     folder: "src/content/about"

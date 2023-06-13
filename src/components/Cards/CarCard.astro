@@ -1,5 +1,6 @@
 ---
 import Button from "../Button.astro";
+import Details from "./CarCardComponents/Details.astro";
 
 import type { CollectionEntry } from "astro:content";
 interface Props {
@@ -26,18 +27,11 @@ const fullCarName = `${car.data.make} ${car.data.model}`;
     <h2 class="font-semibold text-lg text-center border-b border-zinc-300 p-2">
       {fullCarName}
     </h2>
-    <div class="flex gap-4 p-4">
-      <ul class="font-light">
-        <li>Model year:</li>
-        <li>Mileage:</li>
-        <li>Transmission:</li>
-      </ul>
-      <ul class="font-base">
-        <li>{car.data.modelYear}</li>
-        <li>{car.data.mileage}</li>
-        <li>{car.data.transmission}</li>
-      </ul>
-    </div>
+    <Details
+      modelYear={car.data.modelYear}
+      mileage={car.data.mileage}
+      transmission={car.data.transmission}
+    />
     <Button href={car.slug}>RESERVE</Button>
   </div>
 </div>

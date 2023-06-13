@@ -6,7 +6,7 @@ const hero = await getEntry("hero", "hero");
 
 <div
   class="flex align-middle justify-center bg-center"
-  style="background-image: url(/huracan.jpg)"
+  style=`background-image: url(${hero.data.background})`
 >
   <div class="text-center p-48">
     <h1 class="font-semibold text-3xl">{hero.data.heading}</h1>

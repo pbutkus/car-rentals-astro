@@ -36,6 +36,7 @@ const hero = defineCollection({
   schema: z.object({
     heading: z.string(),
     subheading: z.string(),
+    background: z.string(),
   }),
 });
 
