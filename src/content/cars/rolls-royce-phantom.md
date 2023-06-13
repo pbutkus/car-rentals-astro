@@ -1,7 +1,7 @@
 ---
-title: Rolls Royce Phantom
-make: Rolls Royce
-model: Phantom
+title: "Ferrari 488 Spider "
+make: Ferrari
+model: 488 Spider
 modelYear: 2020
 mileage: 2222
 engineSize: 6000
