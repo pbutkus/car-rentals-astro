@@ -7,7 +7,7 @@ mileage: 2222
 engineSize: 6000
 transmission: Automatic
 price: 1111
-thumbnail: /images/uploads/_ce9e12ad-317e-4dc5-be2e-1f14da35e898.jpg
+thumbnail: /images/uploads/image_2023-06-13_213337433.png
 galleryImages:
   - /images/uploads/_ce9e12ad-317e-4dc5-be2e-1f14da35e898.jpg
 ---
