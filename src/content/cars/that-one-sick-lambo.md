@@ -1,11 +1,11 @@
 ---
-title: That one sick lambo
-make: Lamborghini
-model: Huracan
+title: Ferrari 488 GTB
+make: Ferrari
+model: 488 GTB
 modelYear: 2022
 mileage: 6969
 engineSize: 5000
 transmission: Automatic
 price: 6969
-thumbnail: /images/uploads/_2b329831-c6dd-47f6-b6d7-39e780c0fb78.jpg
+thumbnail: /images/uploads/image_2023-06-13_213754905.png
 ---
