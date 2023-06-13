@@ -1,7 +1,7 @@
 ---
 title: About Us
 thumbnail:
-  image: /images/uploads/brayden-law-iblophwohje-unsplash.jpg
+  image: /images/uploads/image_2023-06-13_210832497.png
   description: Lamborghini Huracan
   position: left
 paragraphs:
