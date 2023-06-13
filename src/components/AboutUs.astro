@@ -9,7 +9,11 @@ const isReverse =
 
 <div class=`flex ${isReverse} items-center p-6`>
   <div class="p-6">
-    <img src="/huracan.jpg" alt="Lamborghini Huracan" class="shadow-lg" />
+    <img
+      src={about.data.thumbnail.image}
+      alt={about.data.thumbnail.description}
+      class="shadow-lg"
+    />
   </div>
   <div class="flex flex-col p-6 gap-4">
     <div>
