@@ -10,6 +10,7 @@ interface Props {
 const { car } = Astro.props;
 
 const fullCarName = `${car.data.make} ${car.data.model}`;
+const link = `/cars/${car.slug}`;
 ---
 
 <div class="w-1/4 min-w-[240px] bg-zinc-50 rounded-sm">
@@ -32,6 +33,6 @@ const fullCarName = `${car.data.make} ${car.data.model}`;
       mileage={car.data.mileage}
       transmission={car.data.transmission}
     />
-    <Button href={car.slug}>RESERVE</Button>
+    <Button href={link}>RESERVE</Button>
   </div>
 </div>

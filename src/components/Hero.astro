@@ -5,7 +5,7 @@ const hero = await getEntry("hero", "hero");
 ---
 
 <div
-  class="flex align-middle justify-center bg-center bg-cover"
+  class="flex align-middle justify-center bg-center bg-cover relative mb-6"
   style=`background-image: url(${hero.data.background})`
 >
   <div class="text-center p-48">
@@ -15,4 +15,14 @@ const hero = await getEntry("hero", "hero");
       >Book Your Dream Ride Now</button
     >
   </div>
+  <svg
+    viewBox="0 0 400 100"
+    fill="none"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="absolute bottom-[0px] w-full h-[100px]"
+  >
+    <path d="M200 100L400 0V100H200Z" fill="white"></path>
+    <path d="M200 100H0L0 0L200 100Z" fill="white"></path>
+  </svg>
 </div>
