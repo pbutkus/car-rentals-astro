@@ -4,6 +4,15 @@ backend:
 media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 collections:
+  - name: "siteIdentity"
+    label: "Site Identity"
+    folder: "src/content/site-identity"
+    create: true
+    delete: false
+    slug: "site-identity"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Logo", name: "logo", widget: "image" }
   - name: "hero"
     label: "Hero"
     folder: "src/content/hero"

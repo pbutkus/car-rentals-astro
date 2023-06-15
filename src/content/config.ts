@@ -1,7 +1,13 @@
-// 1. Import utilities from `astro:content`
 import { z, defineCollection } from "astro:content";
 
-// 2. Define a `type` and `schema` for each collection
+const siteIdentity = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    logo: z.string(),
+  }),
+});
+
 const carsCollection = defineCollection({
   type: "content", // v2.5.0 and later
   schema: z.object({
