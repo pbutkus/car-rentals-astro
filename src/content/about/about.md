@@ -1,8 +1,8 @@
 ---
 title: About Us
 thumbnail:
-  image: /images/uploads/image_2023-06-13_210832497.png
-  description: Lamborghini Huracan
+  image: /images/uploads/aboutus.jpg
+  description: About us
   position: left
 paragraphs:
   - At [Company Name], we are passionate about luxury cars and providing
@@ -13,8 +13,9 @@ paragraphs:
     fleet of luxury vehicles, ensuring that every customer enjoys a seamless and
     unforgettable journey.
 whyChooseUsList:
-  - Unmatched expertise in luxury car rentals
-  - Premium quality vehicles for an extraordinary driving experience
-  - Exceptional customer service and attention to detail
-  - Proven track record of customer satisfaction
+  - You need to Have an International Driving License.
+  - Apart from this, you need to hold an ID or Passport for tourists.
+  - You must have attained the minimum age of 18 or older.
+  - It is also necessary for you to have a Credit Card for the Security Deposit,
+    which must be provided at the time of booking.
 ---
