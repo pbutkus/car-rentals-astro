@@ -83,5 +83,5 @@ export const collections = {
   about: about,
   hero: hero,
   "services-and-features": servicesAndFeatures,
-  "featured-cars": featuredCars,
+  // "featured-cars": featuredCars,
 };
