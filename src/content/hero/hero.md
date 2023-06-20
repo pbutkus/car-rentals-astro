@@ -1,5 +1,5 @@
 ---
-heading: Ferrari Rental Monaco
-subheading: Delivery all Europe
+heading: Company Name
+subheading: Your Slogan
 background: /huracan.jpg
 ---
