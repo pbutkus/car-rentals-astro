@@ -19,11 +19,12 @@ const newCars = await getEntries(featuredCars.data.newCars);
     {featuredCars.data.title}
   </h2>
   <div>
-    <div class="flex gap-2 text-white justify-center mb-6">
-      <button id="bestsellers-button" class="active border-b-2 border-white p-4"
-        >Bestsellers</button
+    <div class="flex gap-2 text-white justify-center mb-4">
+      <button
+        id="bestsellers-button"
+        class="box-border border-b-2 border-white p-2">Bestsellers</button
       >
-      <button id="newcars-button">New Cars</button>
+      <button id="newcars-button" class="border-white p-2">New Cars</button>
     </div>
     <div id="bestsellers-container" class="block">
       <div class="flex flex-wrap gap-10 justify-center">
@@ -52,6 +53,8 @@ const newCars = await getEntries(featuredCars.data.newCars);
       bestsellersContainer.classList.add("block");
       newcarsContainer.classList.remove("block");
       newcarsContainer.classList.add("hidden");
+      newcarsButton.classList.remove("border-b-2");
+      bestsellersButton.classList.add("border-b-2");
       activeContainer = bestsellersContainer;
     }
   });
@@ -62,6 +65,8 @@ const newCars = await getEntries(featuredCars.data.newCars);
       newcarsContainer.classList.add("block");
       bestsellersContainer.classList.remove("block");
       bestsellersContainer.classList.add("hidden");
+      bestsellersButton.classList.remove("border-b-2");
+      newcarsButton.classList.add("border-b-2");
       activeContainer = newcarsContainer;
     }
   });
