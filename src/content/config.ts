@@ -63,16 +63,8 @@ const featuredCars = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    bestsellers: z.array(
-      z.object({
-        car: reference("cars"),
-      })
-    ),
-    newCars: z.array(
-      z.object({
-        car: z.string(),
-      })
-    ),
+    bestsellers: z.array(reference("cars")),
+    newCars: z.array(reference("cars")),
   }),
 });
 
@@ -83,5 +75,5 @@ export const collections = {
   about: about,
   hero: hero,
   "services-and-features": servicesAndFeatures,
-  // "featured-cars": featuredCars,
+  "featured-cars": featuredCars,
 };

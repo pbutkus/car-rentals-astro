@@ -1,23 +1,60 @@
 ---
-import {
-  getCollection,
-  getEntry,
-  CollectionEntry,
-  getEntries,
-} from "astro:content";
+import { getEntry, getEntries } from "astro:content";
 import CarCard from "./Cards/CarCard.astro";
 
-const cars = await getCollection("cars");
+const featuredCars = await getEntry("featured-cars", "featured-cars");
 
-// const featuredCars = await getEntry("featured-cars", "featured-cars");
-
-// const bestsellers = await getEntry(featuredCars.data.bestsellers[0].car);
-// const newCars = [];
+const bestsellers = await getEntries(featuredCars.data.bestsellers);
+const newCars = await getEntries(featuredCars.data.newCars);
 ---
 
 <div class="py-24 bg-zinc-950">
-  <h2 class="text-center font-semibold text-3xl mb-24 text-white">TESTTEST</h2>
-  <div class="flex flex-wrap gap-10 justify-center text-green-500">
-    {cars.map((car) => <CarCard car={car} />)}
+  <h2 class="text-center font-semibold text-3xl mb-24 text-white">
+    {featuredCars.data.title}
+  </h2>
+  <div>
+    <div class="flex gap-2 text-white">
+      <button id="bestsellers-button">Bestsellers</button>
+      <button id="newcars-button">New Cars</button>
+    </div>
+    <div id="bestsellers-container" class="block">
+      <div class="flex flex-wrap gap-10 justify-center">
+        {bestsellers.map((car) => <CarCard car={car} />)}
+      </div>
+    </div>
+    <div id="newcars-container" class="hidden">
+      <div class="flex flex-wrap gap-10 justify-center">
+        {newCars.map((car) => <CarCard car={car} />)}
+      </div>
+    </div>
   </div>
 </div>
+
+<script lang="js">
+  const bestsellersButton = document.getElementById("bestsellers-button");
+  const newcarsButton = document.getElementById("newcars-button");
+  const bestsellersContainer = document.getElementById("bestsellers-container");
+  const newcarsContainer = document.getElementById("newcars-container");
+
+  let activeContainer = bestsellersContainer;
+
+  bestsellersButton.addEventListener("click", () => {
+    if (activeContainer !== bestsellersContainer) {
+      bestsellersContainer.classList.remove("hidden");
+      bestsellersContainer.classList.add("block");
+      newcarsContainer.classList.remove("block");
+      newcarsContainer.classList.add("hidden");
+      activeContainer = bestsellersContainer;
+    }
+  });
+
+  newcarsButton.addEventListener("click", () => {
+    if (activeContainer !== newcarsContainer) {
+      newcarsContainer.classList.remove("hidden");
+      newcarsContainer.classList.add("block");
+      bestsellersContainer.classList.remove("block");
+      bestsellersContainer.classList.add("hidden");
+      activeContainer = newcarsContainer;
+    }
+  });
+</script>

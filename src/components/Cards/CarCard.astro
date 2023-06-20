@@ -33,6 +33,19 @@ const link = `/cars/${car.slug}`;
       mileage={car.data.mileage}
       transmission={car.data.transmission}
     />
-    <Button href={link}>RESERVE</Button>
+    <div class="flex flex-row w-full">
+      <a
+        class="p-4 bg-red-700 text-white w-1/2 text-center"
+        href="http://"
+        target="_blank"
+        rel="noopener noreferrer">Email</a
+      >
+      <a
+        class="p-4 bg-green-700 text-white w-1/2 text-center"
+        href="http://"
+        target="_blank"
+        rel="noopener noreferrer">Whatsapp</a
+      >
+    </div>
   </div>
 </div>

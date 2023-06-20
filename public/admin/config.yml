@@ -82,6 +82,15 @@ collections:
         options:
           - { label: "Automatic", value: "Automatic" }
           - { label: "Manual", value: "Manual" }
+      - label: "Fuel Type"
+        name: "fuel"
+        widget: "select"
+        options:
+          - { label: "Petrol", value: "Petrol" }
+          - { label: "Electric", value: "Electric" }
+          - { label: "Diesel", value: "Diesel" }
+          - { label: "Hybrid", value: "Hybrid" }
+      - { label: "Number of Seats", name: "seats", widget: "number" }
       - { label: "Price Per Day", name: "price", widget: "number" }
       - { label: "Featured Photo", name: "thumbnail", widget: "image" }
       - label: "Gallery"
