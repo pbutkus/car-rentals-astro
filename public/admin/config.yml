@@ -63,7 +63,7 @@ collections:
     label: "Car"
     folder: "src/content/cars"
     create: true
-    slug: "{{slug}}"
+    slug: "{{fields.title}}"
     fields:
       - {
           label: "Title",
@@ -105,10 +105,21 @@ collections:
             name: "car"
             widget: "relation"
             collection: "car"
-            search_fields: ["make", "model"]
+            search_fields: ["title"]
             value_field: "{{slug}}"
-            display_fields:
-              ["make", "model", "modelYear", "mileage", "transmission"]
+            display_fields: ["title"]
+      - label: "New Cars"
+        name: "newCars"
+        widget: "list"
+        fields:
+          fields:
+            - label: "Car"
+              name: "car"
+              widget: "relation"
+              collection: "car"
+              search_fields: ["title"]
+              value_field: "{{slug}}"
+              display_fields: ["title"]
   - name: "servicesAndFeatures"
     label: "Services And Features"
     folder: "src/content/services-and-features"
