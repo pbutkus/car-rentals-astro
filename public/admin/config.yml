@@ -89,6 +89,26 @@ collections:
         widget: "list"
         summary: "{{fields.image}}"
         field: { label: "Image", name: "image", widget: "image" }
+  - name: "featuredCars"
+    label: "Featured Cars"
+    folder: "src/content/featured-cars"
+    create: true
+    delete: false
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Bestsellers"
+        name: "bestsellers"
+        widget: "list"
+        fields:
+          - label: "Car"
+            name: "car"
+            widget: "relation"
+            collection: "cars"
+            search_fields: ["make", "model"]
+            value_field: "{{slug}}"
+            display_fields:
+              ["make", "model", "modelYear", "mileage", "transmission"]
   - name: "servicesAndFeatures"
     label: "Services And Features"
     folder: "src/content/services-and-features"

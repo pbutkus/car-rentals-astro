@@ -1,7 +1,12 @@
+---
+import { getEntry } from "astro:content";
+const identity = await getEntry("site-identity", "site-identity");
+---
+
 <div class="sticky bg-zinc-950 text-gray-200">
-  <div class="flex flex-row p-4 justify-between">
+  <div class="flex flex-row py-4 px-12 justify-between items-center">
     <div>
-      <h2 class="font-bold">LOGO</h2>
+      <img class="h-10" src={identity.data.logo} alt={identity.data.title} />
     </div>
     <div>
       <ul class="inline-flex space-x-6">
