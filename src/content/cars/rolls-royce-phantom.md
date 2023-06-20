@@ -6,6 +6,8 @@ modelYear: 2020
 mileage: 2222
 engineSize: 6000
 transmission: Automatic
+fuel: Petrol
+seats: 2
 price: 1111
 thumbnail: /images/uploads/image_2023-06-13_213337433.png
 galleryImages:
