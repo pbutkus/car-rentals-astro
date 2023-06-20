@@ -1,4 +1,4 @@
-import { z, defineCollection } from "astro:content";
+import { z, defineCollection, reference } from "astro:content";
 
 const siteIdentity = defineCollection({
   type: "content",
@@ -63,8 +63,16 @@ const featuredCars = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    bestsellers: z.array(z.string()),
-    newCars: z.array(z.string()),
+    bestsellers: z.array(
+      z.object({
+        car: reference("cars"),
+      })
+    ),
+    newCars: z.array(
+      z.object({
+        car: z.string(),
+      })
+    ),
   }),
 });
 
@@ -75,4 +83,5 @@ export const collections = {
   about: about,
   hero: hero,
   "services-and-features": servicesAndFeatures,
+  "featured-cars": featuredCars,
 };

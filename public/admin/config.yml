@@ -92,7 +92,7 @@ collections:
   - name: "featuredCars"
     label: "Featured Cars"
     folder: "src/content/featured-cars"
-    create: true
+    create: false
     delete: false
     slug: "{{slug}}"
     fields:
@@ -104,6 +104,7 @@ collections:
           - label: "Car"
             name: "car"
             widget: "relation"
+            multiple: true
             collection: "car"
             search_fields: ["title"]
             value_field: "{{slug}}"
