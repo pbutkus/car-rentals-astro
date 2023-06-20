@@ -92,7 +92,7 @@ collections:
   - name: "featuredCars"
     label: "Featured Cars"
     folder: "src/content/featured-cars"
-    create: false
+    create: true
     delete: false
     slug: "{{slug}}"
     fields:
