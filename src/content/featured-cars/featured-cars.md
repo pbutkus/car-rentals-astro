@@ -1,14 +1,11 @@
 ---
 title: Featured Cars
 bestsellers:
-  - car:
-      - rolls-royce-phantom
-      - that-one-sick-lambo
-      - rolls-royce-cullinan-1
-  - car: rolls-royce-cullinan-1
-  - car: rolls-royce-phantom
+  - rolls-royce-phantom
+  - that-one-sick-lambo
+  - rolls-royce-cullinan-1
 newCars:
-  - car: rolls-royce-cullinan-1
-  - car: rolls-royce-phantom
-  - car: that-one-sick-lambo
+  - rolls-royce-cullinan-1
+  - rolls-royce-phantom
+  - that-one-sick-lambo
 ---
