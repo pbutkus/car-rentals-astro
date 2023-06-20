@@ -1,6 +1,7 @@
 ---
 import Button from "../Button.astro";
 import Details from "./CarCardComponents/Details.astro";
+import Icon from "astro-icon";
 
 import type { CollectionEntry } from "astro:content";
 interface Props {
@@ -32,20 +33,28 @@ const link = `/cars/${car.slug}`;
       modelYear={car.data.modelYear}
       mileage={car.data.mileage}
       transmission={car.data.transmission}
+      fuel={car.data.fuel}
+      seats={car.data.seats}
     />
     <div class="flex flex-row w-full">
       <a
-        class="p-4 bg-red-700 text-white w-1/2 text-center"
+        class="flex flex-row gap-2 p-4 bg-red-700 text-white w-1/2 justify-center align-middle hover:bg-red-800 hover:text-gray-50"
         href="http://"
         target="_blank"
-        rel="noopener noreferrer">Email</a
+        rel="noopener noreferrer"
       >
+        <Icon class="w-5" name="bi:envelope" />
+        <p class="leading-snug">Email</p>
+      </a>
       <a
-        class="p-4 bg-green-700 text-white w-1/2 text-center"
+        class="flex flex-row gap-2 p-4 bg-green-700 text-white w-1/2 justify-center align-middle hover:bg-green-800 hover:text-gray-50"
         href="http://"
         target="_blank"
-        rel="noopener noreferrer">Whatsapp</a
+        rel="noopener noreferrer"
       >
+        <Icon class="w-5" name="bi:whatsapp" />
+        <p class="leading-snug">Whatsapp</p>
+      </a>
     </div>
   </div>
 </div>

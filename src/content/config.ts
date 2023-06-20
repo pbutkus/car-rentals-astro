@@ -18,6 +18,8 @@ const carsCollection = defineCollection({
     mileage: z.number(),
     engineSize: z.number(),
     transmission: z.string(),
+    fuel: z.string(),
+    seats: z.number(),
     price: z.number(),
     thumbnail: z.string(),
   }),

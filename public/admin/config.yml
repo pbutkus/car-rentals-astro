@@ -101,7 +101,7 @@ collections:
   - name: "featuredCars"
     label: "Featured Cars"
     folder: "src/content/featured-cars"
-    create: true
+    create: false
     delete: false
     slug: "{{slug}}"
     fields:
@@ -132,6 +132,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Background Image", name: "bgImage", "image" }
       - label: "Services List"
         name: "servicesList"
         widget: "list"
