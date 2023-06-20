@@ -6,6 +6,8 @@ modelYear: 2022
 mileage: 1111
 engineSize: 5000
 transmission: Automatic
+fuel: Petrol
+seats: 2
 price: 1111
 thumbnail: /images/uploads/image_2023-06-13_213754905.png
 ---
