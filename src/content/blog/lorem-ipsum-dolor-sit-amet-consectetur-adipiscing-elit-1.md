@@ -1,6 +1,14 @@
 ---
 title: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 featuredImage: /images/uploads/brayden-law-iblophwohje-unsplash.jpg
+intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+  ultrices dignissim consectetur. Proin elementum elementum lacus, id ultricies
+  purus hendrerit ut. Sed maximus libero eget mollis lobortis. Ut turpis nibh,
+  iaculis et tortor quis, consectetur sagittis elit. Aenean et purus a enim
+  hendrerit vestibulum. Praesent euismod felis ut turpis faucibus, sit amet
+  fringilla turpis interdum. Suspendisse nisl orci, fringilla sit amet nulla sit
+  amet, efficitur congue nisi. Nulla facilisi. In hac habitasse platea dictumst.
+  Donec sit amet sem ipsum.
 ---
 
 # H1 heading
