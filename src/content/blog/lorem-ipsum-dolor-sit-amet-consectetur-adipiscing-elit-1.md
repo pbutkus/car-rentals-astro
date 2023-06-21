@@ -1,5 +1,6 @@
 ---
 title: Fun & Unusual Things to Do in Miami, Florida 2023
+publishingDate: 2023-06-21T15:53:37.861Z
 featuredImage: /images/uploads/fun-things-to-do-in-miami.jpg
 intro: Home to some of Florida’s best beaches, plenty of exciting museums and
   theme parks, vibrant nightlife, and amazing events year-round — not to mention
