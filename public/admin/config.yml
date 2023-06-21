@@ -143,6 +143,7 @@ collections:
               name: "serviceHeading",
               widget: "string",
             }
+          - { label: "Service Icon", name: "serviceIcon", widget: "image" }
           - {
               label: "Service Description",
               name: "serviceDescription",
