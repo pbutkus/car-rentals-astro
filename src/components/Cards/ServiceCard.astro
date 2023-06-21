@@ -2,6 +2,7 @@
 interface Props {
   service: {
     serviceHeading: string;
+    serviceIcon: string;
     serviceDescription: string;
   };
 }
@@ -10,8 +11,15 @@ const { service } = Astro.props;
 ---
 
 <div class="p-6 shadow-md rounded-sm min-w-[250px] max-w-[20%] bg-white">
-  <h2 class="text-xl">
-    {service.serviceHeading}
-  </h2>
+  <div class="flex flex-row gap-1 justify-between pb-2">
+    <h2 class="text-xl">
+      {service.serviceHeading}
+    </h2>
+    <img
+      class="w-8 h-8"
+      src={service.serviceIcon}
+      alt={service.serviceHeading}
+    />
+  </div>
   <p class="font-light">{service.serviceDescription}</p>
 </div>

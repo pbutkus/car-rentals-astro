@@ -56,6 +56,7 @@ const servicesAndFeatures = defineCollection({
     servicesList: z.array(
       z.object({
         serviceHeading: z.string(),
+        serviceIcon: z.string(),
         serviceDescription: z.string(),
       })
     ),
