@@ -1,6 +1,7 @@
 ---
 import { getEntry } from "astro:content";
 import ServiceCard from "./Cards/ServiceCard.astro";
+import StarIcon from "./Misc/StarIcon.astro";
 
 const servicesAndFeatures = await getEntry(
   "services-and-features",
@@ -14,10 +15,17 @@ const servicesList = servicesAndFeatures.data.servicesList;
   class="p-6 bg-center"
   style={`background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(.${servicesAndFeatures.data.bgImage}); background-position: center;`}
 >
+  <div class="flex flex-row items-center justify-center pb-6 gap-2">
+    <StarIcon class="h-12 w-12 fill-yellow-500 stroke-yellow-500" />
+    <StarIcon class="h-12 w-12 fill-yellow-500 stroke-yellow-500" />
+    <StarIcon class="h-12 w-12 fill-yellow-500 stroke-yellow-500" />
+    <StarIcon class="h-12 w-12 fill-yellow-500 stroke-yellow-500" />
+    <StarIcon class="h-12 w-12 fill-yellow-500 stroke-yellow-500" />
+  </div>
   <h2 class="text-center font-semibold text-3xl mb-6 text-white">
     {servicesAndFeatures.data.title}
   </h2>
-  <div class="flex flex-wrap gap-6 justify-center">
+  <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
     {servicesList.map((entry) => <ServiceCard service={entry} />)}
   </div>
 </div>

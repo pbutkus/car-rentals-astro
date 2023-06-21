@@ -8,7 +8,7 @@ const hero = await getEntry("hero", "hero");
   class="flex align-middle justify-center bg-center bg-cover relative"
   style=`background-image: url(${hero.data.background})`
 >
-  <div class="text-center p-48">
+  <div class="text-center sm:p-48 p-32">
     <h1 class="font-semibold text-white text-3xl">{hero.data.heading}</h1>
     <h2 class="font-light text-white">{hero.data.subheading}</h2>
   </div>

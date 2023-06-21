@@ -5,25 +5,29 @@ import TextInput from "./Inputs/TextInput.astro";
 <div>
   <div class="flex flex-col justify-center items-center">
     <form
-      class="flex flex-col gap-4 rounded-sm border w-1/2 p-6 my-6 shadow-2xl"
+      class="flex flex-col gap-4 rounded-sm border p-6 my-6 shadow-2xl"
       action=""
     >
       <h2 class="text-center font-semibold text-3xl mb-6">
         Book Your Dream Ride
       </h2>
-      <div class="flex flex-row gap-4">
+      <div class="flex md:flex-row flex-col gap-4">
         <TextInput type="text" name="first-name" label="First name:" />
         <TextInput type="text" name="last-name" label="Last name:" />
       </div>
       <TextInput type="text" name="email" label="Email:" />
       <TextInput type="text" name="phone-number" label="Phone number:" />
+      <div class="flex flex-row gap-4">
+        <TextInput type="date" name="date-from" label="Date from:" />
+        <TextInput type="date" name="date-to" label="Date to:" />
+      </div>
       <div class="flex flex-col">
         <label class="font-light" for="message">Your message:</label>
         <textarea
           name="message"
           id="message"
           cols="30"
-          rows="10"
+          rows="5"
           class="p-1 border-2 border-zinc-300 outline-none active:border-red-600 focus:border-red-600 focus:outline-red-300 focus:outline-offset-0 rounded-sm"
         ></textarea>
       </div>

@@ -4,15 +4,17 @@ import { getEntry } from "astro:content";
 const about = await getEntry("about", "about");
 
 const isReverse =
-  about.data.thumbnail.position == "left" ? "flex-row" : "flex-row-reverse";
+  about.data.thumbnail.position == "left"
+    ? "md:flex-row"
+    : "md:flex-row-reverse";
 ---
 
-<div class=`flex ${isReverse} items-center p-6`>
-  <div class="p-6">
+<div class=`flex ${isReverse} flex-col items-center p-6`>
+  <div class="p-6 hidden md:block">
     <img
       src={about.data.thumbnail.image}
       alt={about.data.thumbnail.description}
-      class="shadow-lg"
+      class="shadow-lg object-cover"
     />
   </div>
   <div class="flex flex-col p-6 gap-4">
@@ -24,6 +26,11 @@ const isReverse =
         {about.data.paragraphs.map((para) => <p>{para}</p>)}
       </div>
     </div>
+    <img
+      src={about.data.thumbnail.image}
+      alt={about.data.thumbnail.description}
+      class="block md:hidden shadow-lg object-cover"
+    />
     <div>
       <h3 class="font-semibold">Requirements</h3>
       <ul class="font-light list-disc list-inside">
