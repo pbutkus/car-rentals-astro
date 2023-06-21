@@ -149,6 +149,22 @@ collections:
               name: "serviceDescription",
               widget: "string",
             }
+  - name: "whyChooseUs"
+    label: "Why Choose Us"
+    folder: "src/content/why-choose-us"
+    create: true
+    delete: false
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Card"
+        name: "card"
+        widget: "list"
+        summary: "{{fields.cardTitle}}"
+        fields:
+          - { label: "Card Title", name: "cardTitle", widget: "string" }
+          - { label: "Card Icon", name: "cardIcon", widget: "image" }
+          - { label: "Card Subtitle", name: "cardSubtitle", widget: "string" }
   - name: "blog"
     label: "Blog"
     folder: "src/content/blog"
