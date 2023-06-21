@@ -1,22 +1,31 @@
 <div class="text-white bg-zinc-900">
-  <div class="flex flex-row justify-between py-8 px-24">
+  <div class="flex md:flex-row flex-col justify-between py-8 px-24">
     <div class="">
       <h2 class="font-bold">YOUR LOGO</h2>
       <p class="font-light">Experience the Thrill of Driving Exclusivity</p>
     </div>
-    <div class="flex flex-row font-semibold gap-4 items-center justify-center">
+    <div
+      class="flex lg:flex-row flex-col font-semibold gap-4 items-center justify-center"
+    >
       <p>email@email</p>
       <p>+1 111 111111</p>
     </div>
     <div class="flex flex-col">
       <p class="font-light mb-2">Subscribe to our exclusive deals</p>
-      <input
-        class="w-96 rounded-md py-1 px-2 text-black"
-        type="text"
-        name=""
-        id=""
-        placeholder="your@email.com"
-      />
+      <div
+        class="flex flex-row focus-within:outline-2 border-2 border-transparent focus-within:border-red-600 rounded-lg leading-10"
+      >
+        <input
+          class="w-96 rounded-md rounded-r-none py-1 px-2 text-black outline-none"
+          type="text"
+          name=""
+          id=""
+          placeholder="your@email.com"
+        />
+        <button class="py-1 bg-red-700 px-2 rounded-r-md hover:bg-red-800"
+          >&#8594;</button
+        >
+      </div>
     </div>
   </div>
 </div>

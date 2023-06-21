@@ -2,11 +2,25 @@
 import { CollectionEntry, getCollection } from "astro:content";
 const blogPosts = await getCollection("blog");
 
-let latestPosts: CollectionEntry<"blog">[] = blogPosts;
-
-if (latestPosts.length > 3) {
-  latestPosts.length = 3;
+interface BlogCard {
+  title: string;
+  image: string;
+  summary: string;
+  slug: string;
 }
+
+const cards: BlogCard[] = [];
+
+blogPosts.length = 3;
+
+blogPosts.map((post) => {
+  const title = post.data.title;
+  const image = post.data.featuredImage;
+  const summary = post.data.intro.substring(0, 196).trim() + "...";
+  const slug = post.slug;
+
+  cards.push({ title, image, summary, slug });
+});
 ---
 
 <div class="flex flex-col my-24">
@@ -15,11 +29,14 @@ if (latestPosts.length > 3) {
   </div>
   <div class="flex flex-row justify-between mx-12 mt-12">
     {
-      latestPosts.map((post) => (
-        <div class="flex flex-col bg-green-500 w-96">
-          <h3 class="font-semibold">{post.data.title}</h3>
-          <p>{post.body}</p>
-        </div>
+      cards.map((card) => (
+        <a href={`/blog/${card.slug}`}>
+          <div class="flex flex-col shadow-md w-96 hover:translate-y-2 transition-transform">
+            <img src={card.image} alt={card.title} />
+            <h3 class="px-4 py-2 font-semibold">{card.title}</h3>
+            <p class="px-4 pb-2 font-light">{card.summary}</p>
+          </div>
+        </a>
       ))
     }
   </div>

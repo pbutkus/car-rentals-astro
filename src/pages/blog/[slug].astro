@@ -22,15 +22,18 @@ const { Content, headings } = await entry.render();
     style={`background-image: url(${entry.data.featuredImage});`}
   >
     <h1
-      class="text-center bg-white py-12 sm:mx-12 text-3xl font-semibold"
+      class="text-center bg-white/75 py-12 text-3xl font-semibold"
       style="text-wrap: balance;"
     >
       {entry.data.title}
     </h1>
   </div>
-  <div
-    class="sm:px-24 px-12 whitespace-pre-line prose-headings:font-bold prose-p:mb-10 prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:text-gray-700"
-  >
-    <Content />
+  <div class="sm:px-24 px-12 whitespace-pre-line">
+    <p class="text-lg">{entry.data.intro}</p>
+    <div
+      class="prose-headings:font-bold prose-p:mb-10 prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:text-gray-700"
+    >
+      <Content />
+    </div>
   </div>
 </PageLayout>

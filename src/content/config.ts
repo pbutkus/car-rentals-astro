@@ -76,6 +76,7 @@ const blogCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     featuredImage: z.string(),
+    intro: z.string(),
   }),
 });
 
