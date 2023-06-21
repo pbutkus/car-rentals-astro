@@ -32,7 +32,7 @@ blogPosts.map((post) => {
       cards.map((card) => (
         <a href={`/blog/${card.slug}`}>
           <div class="flex flex-col shadow-md w-96 hover:translate-y-2 transition-transform">
-            <img src={card.image} alt={card.title} />
+            <img class="object-cover h-64" src={card.image} alt={card.title} />
             <h3 class="px-4 py-2 font-semibold">{card.title}</h3>
             <p class="px-4 pb-2 font-light">{card.summary}</p>
           </div>
