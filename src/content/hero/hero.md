@@ -1,5 +1,5 @@
 ---
 heading: Company Name
 subheading: Your Slogan
-background: /huracan.jpg
+background: /images/uploads/main.jpg
 ---
