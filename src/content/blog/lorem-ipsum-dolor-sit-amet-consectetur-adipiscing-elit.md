@@ -5,4 +5,4 @@ intro: You simply plug the charging cord into a socket in your garage or even
   outside your home and charge your vehicle's battery that way. New EVs include
   a Level 1 charging cord compatible with your home's electrical outlets.
 ---
-#
+You simply plug the charging cord into a socket in your garage or even outside your home and charge your vehicle's battery that way. New EVs include a Level 1 charging cord compatible with your home's electrical outlets.
