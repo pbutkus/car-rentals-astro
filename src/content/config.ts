@@ -71,6 +71,14 @@ const featuredCars = defineCollection({
   }),
 });
 
+const blogCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    featuredImage: z.string(),
+  }),
+});
+
 // 3. Export a single `collections` object to register your collection(s)
 export const collections = {
   "site-identity": siteIdentity,
@@ -79,4 +87,5 @@ export const collections = {
   hero: hero,
   "services-and-features": servicesAndFeatures,
   "featured-cars": featuredCars,
+  blog: blogCollection,
 };

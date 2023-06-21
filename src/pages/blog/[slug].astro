@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+
+import PageLayout from "../../layouts/PageLayout.astro";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("blog");
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+
+const { Content, headings } = await entry.render();
+---
+
+<PageLayout>
+  <div
+    class="py-24 bg-center"
+    style={`background-image: url(${entry.data.featuredImage});`}
+  >
+    <h1
+      class="text-center bg-white py-12 sm:mx-12 text-3xl font-semibold"
+      style="text-wrap: balance;"
+    >
+      {entry.data.title}
+    </h1>
+  </div>
+  <div
+    class="sm:px-24 px-12 whitespace-pre-line prose-headings:font-bold prose-p:mb-10 prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:text-gray-700"
+  >
+    <Content />
+  </div>
+</PageLayout>
