@@ -7,7 +7,7 @@ collections:
   - name: "siteIdentity"
     label: "Site Identity"
     folder: "src/content/site-identity"
-    create: true
+    create: false
     delete: false
     slug: "site-identity"
     fields:
@@ -132,7 +132,6 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Featured Image", name: "featuredImage", widget: "string" }
       - { label: "Background Image", name: "bgImage", "image" }
       - label: "Services List"
         name: "servicesList"
@@ -157,4 +156,5 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Featured Image", name: "featuredImage", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
