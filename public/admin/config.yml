@@ -152,7 +152,7 @@ collections:
   - name: "whyChooseUs"
     label: "Why Choose Us"
     folder: "src/content/why-choose-us"
-    create: true
+    create: false
     delete: false
     slug: "{{slug}}"
     fields:

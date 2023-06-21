@@ -9,7 +9,7 @@ const siteIdentity = defineCollection({
 });
 
 const carsCollection = defineCollection({
-  type: "content", // v2.5.0 and later
+  type: "content",
   schema: z.object({
     title: z.string(),
     make: z.string(),
@@ -82,7 +82,20 @@ const blogCollection = defineCollection({
   }),
 });
 
-// 3. Export a single `collections` object to register your collection(s)
+const whyChooseUs = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    card: z.array(
+      z.object({
+        cardTitle: z.string(),
+        cardIcon: z.string(),
+        cardSubtitle: z.string(),
+      })
+    ),
+  }),
+});
+
 export const collections = {
   "site-identity": siteIdentity,
   cars: carsCollection,
@@ -91,4 +104,5 @@ export const collections = {
   "services-and-features": servicesAndFeatures,
   "featured-cars": featuredCars,
   blog: blogCollection,
+  "why-choose-us": whyChooseUs,
 };
