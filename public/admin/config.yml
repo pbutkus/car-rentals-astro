@@ -132,7 +132,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Background Image", name: "bgImage", "image" }
+      - { label: "Background Image", name: "bgImage", widget: "image" }
       - label: "Services List"
         name: "servicesList"
         widget: "list"
