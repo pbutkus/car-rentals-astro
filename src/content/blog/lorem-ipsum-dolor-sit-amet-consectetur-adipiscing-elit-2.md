@@ -1,5 +1,6 @@
 ---
 title: Can EVs be used on road trips?
+publishingDate: 2023-06-21T15:53:45.625Z
 featuredImage: /images/uploads/2021_tesla_model-s_sedan_plaid_fq_oem_1_1600x1067.avif
 intro: Progression in electric vehicle technology now means EVs are equally
   suitable for inner-city travel and longer journeys. With approximately 46,000
