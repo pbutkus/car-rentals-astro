@@ -7,7 +7,7 @@ mileage: 0
 engineSize: 1
 transmission: Automatic
 fuel: Petrol
-seats: 3
+seats: 4
 price: 400
 thumbnail: /images/uploads/g.jpg
 ---
