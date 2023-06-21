@@ -12,7 +12,7 @@ const servicesList = servicesAndFeatures.data.servicesList;
 
 <div
   class="p-6 bg-center"
-  style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./huracan.jpg); background-position: center;"
+  style={`background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(.${servicesAndFeatures.data.bgImage}); background-position: center;`}
 >
   <h1 class="text-center font-semibold text-3xl mb-6 text-white">
     {servicesAndFeatures.data.title}

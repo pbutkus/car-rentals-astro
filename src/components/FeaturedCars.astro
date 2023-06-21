@@ -14,17 +14,22 @@ const newCars = await getEntries(featuredCars.data.newCars);
   }
 </style>
 
-<div class="py-24 bg-zinc-950">
-  <h2 class="text-center font-semibold text-3xl mb-24 text-white">
+<div class="py-12 bg-white">
+  <h2 class="text-center font-semibold text-3xl mb-12 text-black">
     {featuredCars.data.title}
   </h2>
   <div>
-    <div class="flex gap-2 text-white justify-center mb-4">
+    <div class="flex text-black justify-center mb-4 font-light leading-6">
       <button
         id="bestsellers-button"
-        class="box-border border-b-2 border-white p-2">Bestsellers</button
+        class="box-border border border-b-2 border-white border-b-black p-2 px-8 hover:text-gray-600"
+        >Bestsellers</button
       >
-      <button id="newcars-button" class="border-white p-2">New Cars</button>
+      <button
+        id="newcars-button"
+        class="box-border border border-white border-b-black p-2 px-8 hover:text-gray-600"
+        >New Cars</button
+      >
     </div>
     <div id="bestsellers-container" class="block">
       <div class="flex flex-wrap gap-10 justify-center">

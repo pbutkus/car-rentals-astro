@@ -148,3 +148,12 @@ collections:
               name: "serviceDescription",
               widget: "string",
             }
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }

@@ -1,5 +1,6 @@
 ---
 title: Our Services and Features
+bgImage: /huracan.jpg
 servicesList:
   - serviceHeading: Chauffeur Services
     serviceDescription:
