@@ -109,6 +109,14 @@ const faq = defineCollection({
   }),
 });
 
+const carBrand = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    logo: z.string(),
+  }),
+});
+
 export const collections = {
   "site-identity": siteIdentity,
   cars: carsCollection,
@@ -119,4 +127,5 @@ export const collections = {
   blog: blogCollection,
   "why-choose-us": whyChooseUs,
   faq: faq,
+  "car-brand": carBrand,
 };

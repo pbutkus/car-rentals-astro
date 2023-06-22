@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+const brands = await getCollection("car-brand");
+---
+
+<style>
+  #logo-container {
+    scrollbar-width: thin;
+  }
+</style>
+
+<div class="flex flex-row justify-center px-12 mt-12">
+  <div id="logo-container" class="flex flex-row gap-10 pb-8 overflow-x-auto">
+    {
+      brands.map((brand) => (
+        <img
+          class="grayscale hover:grayscale-0 transition-all w-20 h-20"
+          src={brand.data.logo}
+          alt={brand.data.title}
+        />
+      ))
+    }
+  </div>
+</div>
