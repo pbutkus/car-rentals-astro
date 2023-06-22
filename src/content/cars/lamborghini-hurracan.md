@@ -1,7 +1,7 @@
 ---
-title: Lamborghini Hurracan
+title: Lamborghini Huracan
 make: Lamborghini
-model: Hurracan
+model: Huracan
 modelYear: 1
 mileage: 1
 engineSize: 1
