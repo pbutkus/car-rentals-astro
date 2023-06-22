@@ -207,3 +207,13 @@ collections:
         fields:
           - { label: "Question", name: "question", widget: "string" }
           - { label: "Answer", name: "answer", widget: "markdown" }
+  - name: "review"
+    label: "Review"
+    folder: "src/content/review"
+    create: true
+    delete: true
+    slug: "{{fields.customerName}}"
+    fields:
+      - { label: "Customer Name", name: "customerName", widget: "string" }
+      - { label: "Review", name: "reviewText", widget: "text" }
+      - { label: "Review Date", name: "reviewDate", widget: "date" }
