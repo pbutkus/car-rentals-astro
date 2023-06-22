@@ -6,19 +6,64 @@ const brands = await getCollection("car-brand");
 <style>
   #logo-container {
     scrollbar-width: thin;
+    overflow-x: auto;
   }
 </style>
 
-<div class="flex flex-row justify-center px-12 mt-12">
-  <div id="logo-container" class="flex flex-row gap-10 pb-8 overflow-x-auto">
+<div
+  id="brands-container"
+  class="flex flex-row justify-center items-center px-12 mt-12"
+>
+  <div id="scroll-left" class="fill-gray-600 hover:fill-black transition">
+    <svg
+      class="h-10 w-10"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      ><path
+        d="M14.41 18.16L8.75 12.5l5.66-5.66l.7.71l-4.95 4.95l4.95 4.95l-.7.71Z"
+      ></path></svg
+    >
+  </div>
+  <div id="logo-container" class="flex flex-row gap-10 py-8 scroll-smooth">
     {
       brands.map((brand) => (
         <img
-          class="grayscale hover:grayscale-0 transition-all w-20 h-20"
+          class="grayscale hover:grayscale-0 transition-all duration-500 w-20 h-20"
           src={brand.data.logo}
           alt={brand.data.title}
         />
       ))
     }
   </div>
+  <div id="scroll-right" class="fill-gray-600 hover:fill-black transition">
+    <svg
+      class="w-10 h-10"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      ><path
+        d="m8.59 18.16l5.66-5.66l-5.66-5.66l-.7.71l4.95 4.95l-4.95 4.95l.7.71Z"
+      ></path></svg
+    >
+  </div>
 </div>
+
+<script lang="js">
+  const brandsContainer = document.getElementById("brands-container");
+  const logoContainer = document.getElementById("logo-container");
+  const scrollLeft = document.getElementById("scroll-left");
+  const scrollRight = document.getElementById("scroll-right");
+
+  const brandsContainerWidth = logoContainer.offsetWidth;
+  const logoContainerWidth = logoContainer.scrollWidth;
+
+  console.log(`brands container width: ${brandsContainerWidth}`);
+  console.log(`logo container width: ${logoContainerWidth}`);
+
+  scrollLeft.addEventListener("click", () => {
+    logoContainer.scrollLeft -= 160;
+  });
+
+  scrollRight.addEventListener("click", () => {
+    logoContainer.scrollLeft += 160;
+  });
+</script>
