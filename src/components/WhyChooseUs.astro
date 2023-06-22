@@ -9,7 +9,7 @@ const whyChooseUs = await getEntry("why-choose-us", "why-choose-us");
   <h2 class="text-center font-semibold text-3xl mb-6">
     {whyChooseUs.data.title}
   </h2>
-  <div class="flex flex-row justify-center sm:gap-16 gap-2 mt-12">
+  <div class="flex flex-row justify-center sm:gap-8 md:gap-16 gap-2 mt-12">
     {whyChooseUs.data.card.map((card) => <WhyChooseUsCard data={card} />)}
   </div>
 </div>

@@ -183,3 +183,18 @@ collections:
           editor_components: [],
         }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "faq"
+    label: "FAQ"
+    folder: "src/content/faq"
+    create: true
+    delete: false
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "FAQ Card"
+        name: "faqCard"
+        widget: "list"
+        summary: "{{slug}}"
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "markdown" }
