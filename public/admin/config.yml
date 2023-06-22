@@ -98,6 +98,15 @@ collections:
         widget: "list"
         summary: "{{fields.image}}"
         field: { label: "Image", name: "image", widget: "image" }
+  - name: "carBrand"
+    label: "Car Brand"
+    folder: "src/content/car-brand"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Logo", name: "logo", widget: "image" }
   - name: "featuredCars"
     label: "Featured Cars"
     folder: "src/content/featured-cars"
