@@ -1,0 +1,97 @@
+---
+import { getEntry } from "astro:content";
+import FAQCard from "../components/Cards/FAQCard.astro";
+
+interface FaqCard {
+  id: string;
+  question: string;
+  answer: string;
+}
+
+const faqs = await getEntry("faq", "frequently-asked-questions");
+
+const leftFaqArray: FaqCard[] = [];
+const rightFaqArray: FaqCard[] = [];
+
+const faqsSize = faqs.data.faqCard.length;
+
+for (let i = 0; i < faqsSize / 2; i++) {
+  leftFaqArray.push({
+    id: `faq-${i + 1}`,
+    question: faqs.data.faqCard[i].question,
+    answer: faqs.data.faqCard[i].answer,
+  });
+}
+
+for (let i = faqsSize / 2; i < faqsSize; i++) {
+  rightFaqArray.push({
+    id: `faq-${i + 1}`,
+    question: faqs.data.faqCard[i].question,
+    answer: faqs.data.faqCard[i].answer,
+  });
+}
+---
+
+<div>
+  <h2 class="font-semibold text-3xl text-center">{faqs.data.title}</h2>
+  <div class="flex justify-center">
+    <div class="flex lg:flex-row flex-col lg:gap-2 w-3/4 my-20">
+      <div class="flex flex-col">
+        <div class="rounded-md">
+          {leftFaqArray.map((faq) => <FAQCard card={faq} />)}
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <div class="rounded-md">
+          {rightFaqArray.map((faq) => <FAQCard card={faq} />)}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script lang="js">
+  const faqCards = document.querySelectorAll(".faq-card");
+  let currentlyExpandedCard = null;
+
+  faqCards.forEach((faq) => {
+    const faqTitle = document.getElementById(faq.id + "-question");
+
+    faqTitle.addEventListener("click", () => {
+      const expanded = faq.getAttribute("aria-expanded") === "true";
+      const answer = document.getElementById(`${faq.id}-answer`);
+      const icon = document.getElementById(`${faq.id}-icon`);
+
+      if (currentlyExpandedCard && currentlyExpandedCard !== faq) {
+        const currentAnswer = document.getElementById(
+          `${currentlyExpandedCard.id}-answer`
+        );
+        const currentIcon = document.getElementById(
+          `${currentlyExpandedCard.id}-icon`
+        );
+        if (currentAnswer) {
+          currentAnswer.classList.add("scale-y-0", "max-h-0");
+          currentAnswer.classList.remove("scale-y-100", "max-h-96");
+          currentIcon.classList.remove("rotate-45");
+          currentlyExpandedCard.setAttribute("aria-expanded", "false");
+        }
+      }
+
+      if (answer) {
+        if (expanded) {
+          answer.classList.add("scale-y-0", "max-h-0");
+          answer.classList.remove("scale-y-100", "max-h-96");
+          icon.classList.remove("rotate-45");
+          faq.setAttribute("aria-expanded", "false");
+          currentlyExpandedCard = null;
+        } else {
+          answer.classList.add("scale-y-100", "max-h-96");
+          answer.classList.remove("scale-y-0", "max-h-0");
+          icon.classList.add("rotate-45");
+          faq.setAttribute("aria-expanded", "true");
+          currentlyExpandedCard = faq;
+        }
+      }
+    });
+  });
+</script>

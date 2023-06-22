@@ -96,6 +96,19 @@ const whyChooseUs = defineCollection({
   }),
 });
 
+const faq = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    faqCard: z.array(
+      z.object({
+        question: z.string(),
+        answer: z.string(),
+      })
+    ),
+  }),
+});
+
 export const collections = {
   "site-identity": siteIdentity,
   cars: carsCollection,
@@ -105,4 +118,5 @@ export const collections = {
   "featured-cars": featuredCars,
   blog: blogCollection,
   "why-choose-us": whyChooseUs,
+  faq: faq,
 };

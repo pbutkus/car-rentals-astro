@@ -1,0 +1,61 @@
+---
+import { Markdown } from "@astropub/md";
+
+interface Props {
+  card: {
+    id: string;
+    question: string;
+    answer: string;
+  };
+}
+
+const { card } = Astro.props;
+---
+
+<style>
+  .faq-card {
+    flex: 0.2;
+  }
+
+  .faq-card.active {
+    flex: 3;
+  }
+</style>
+
+<div
+  id={card.id}
+  class="faq-card bg-white border-b-2 hover:border-gray-400 max-h-full"
+  aria-expanded="false"
+>
+  <div>
+    <div
+      id={card.id + "-question"}
+      class="flex flex-row justify-between items-center font-semibold text-xl py-4 px-6 transition cursor-pointer"
+    >
+      <h2>
+        {card.question}
+      </h2>
+      <div
+        id={card.id + "-icon"}
+        class="flex justify-center items-center transition w-7 h-7 leading-7"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          ><path fill="currentColor" d="M5 13v-1h6V6h1v6h6v1h-6v6h-1v-6H5Z"
+          ></path></svg
+        >
+      </div>
+    </div>
+    <div
+      id={card.id + "-answer"}
+      class="scale-y-0 max-h-0 answer transition-all origin-top duration-300 w-full will-change-transform"
+    >
+      <div class="font-light text-lg text-gray-700 p-6 pt-0">
+        <Markdown of={card.answer} />
+      </div>
+    </div>
+  </div>
+</div>
