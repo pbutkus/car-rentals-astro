@@ -117,6 +117,15 @@ const carBrand = defineCollection({
   }),
 });
 
+const reviewCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    customerName: z.string(),
+    reviewText: z.string(),
+    reviewDate: z.date(),
+  }),
+});
+
 export const collections = {
   "site-identity": siteIdentity,
   cars: carsCollection,
@@ -128,4 +137,5 @@ export const collections = {
   "why-choose-us": whyChooseUs,
   faq: faq,
   "car-brand": carBrand,
+  review: reviewCollection,
 };

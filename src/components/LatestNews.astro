@@ -1,5 +1,7 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
+import NewsCard from "./Cards/NewsCard.astro";
+
+import { getCollection } from "astro:content";
 const blogPosts = await getCollection("blog");
 
 interface BlogCard {
@@ -32,29 +34,6 @@ blogPosts.map((post) => {
   <div
     class="flex w-full lg:flex-row flex-col justify-center items-center gap-4 mt-12 lg:px-16"
   >
-    {
-      cards.map((card) => (
-        <div class="flex md:flex-col flex-col shadow-md h-full mx-4 md:mx-12 lg:mx-0">
-          <img class="object-cover h-64" src={card.image} alt={card.title} />
-          <div class="flex flex-col">
-            <div class="flex items-center h-20">
-              <h3 class="px-4 font-semibold">{card.title}</h3>
-            </div>
-            <div class="px-4 pb-2 font-light h-auto">
-              <p class="m-auto">{card.summary}</p>
-            </div>
-            <div class="flex flex-row px-4 pb-2 justify-between">
-              <a
-                class="border-b-2 px-1 hover:border-red-700"
-                href={`/blog/${card.slug}`}
-              >
-                Read full article
-              </a>
-              <p class="text-gray-700">{card.publishingDate}</p>
-            </div>
-          </div>
-        </div>
-      ))
-    }
+    {cards.map((card) => <NewsCard card={card} />)}
   </div>
 </div>

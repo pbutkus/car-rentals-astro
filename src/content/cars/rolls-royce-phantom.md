@@ -1,5 +1,5 @@
 ---
-title: "Ferrari 488 Spider "
+title: "Ferrari 488 Spider"
 make: Ferrari
 model: 488 Spider
 modelYear: 2020

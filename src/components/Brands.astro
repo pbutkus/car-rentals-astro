@@ -12,9 +12,12 @@ const brands = await getCollection("car-brand");
 
 <div
   id="brands-container"
-  class="flex flex-row justify-center items-center px-12 mt-12"
+  class="flex flex-row justify-center items-center md:px-12 px-4 mt-12"
 >
-  <div id="scroll-left" class="fill-gray-600 hover:fill-black transition">
+  <div
+    id="scroll-left"
+    class="fill-gray-600 hover:fill-black transition lg:hidden"
+  >
     <svg
       class="h-10 w-10"
       xmlns="http://www.w3.org/2000/svg"
@@ -27,15 +30,20 @@ const brands = await getCollection("car-brand");
   <div id="logo-container" class="flex flex-row gap-10 py-8 scroll-smooth">
     {
       brands.map((brand) => (
-        <img
-          class="grayscale hover:grayscale-0 transition-all duration-500 w-20 h-20"
-          src={brand.data.logo}
-          alt={brand.data.title}
-        />
+        <a href={`/brand/${brand.slug}`}>
+          <img
+            class="grayscale hover:grayscale-0 transition-all duration-500 w-20 h-20"
+            src={brand.data.logo}
+            alt={brand.data.title}
+          />
+        </a>
       ))
     }
   </div>
-  <div id="scroll-right" class="fill-gray-600 hover:fill-black transition">
+  <div
+    id="scroll-right"
+    class="fill-gray-600 hover:fill-black transition lg:hidden"
+  >
     <svg
       class="w-10 h-10"
       xmlns="http://www.w3.org/2000/svg"

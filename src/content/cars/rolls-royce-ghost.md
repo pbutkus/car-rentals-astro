@@ -1,6 +1,6 @@
 ---
 title: Rolls-Royce Ghost
-make: "Rolls-Royce "
+make: Rolls-Royce
 model: Ghost
 modelYear: 2020
 mileage: 0

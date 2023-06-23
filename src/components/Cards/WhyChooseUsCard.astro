@@ -11,7 +11,7 @@ const { data } = Astro.props;
 ---
 
 <div class="flex flex-col justify-center items-center">
-  <img src={data.cardIcon} alt={data.cardTitle} class="w-1/2" />
+  <img src={data.cardIcon} alt={data.cardTitle} class="w-10 h-10" />
   <h3 class="font-semibold text-2xl text-center">{data.cardTitle}</h3>
   <p class="font-ligt text-center">{data.cardSubtitle}</p>
 </div>

@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import ReviewCarousel from "../components/Carousels/ReviewCarousel.jsx";
+import "@egjs/preact-flicking/dist/flicking.css";
+const reviews = await getCollection("review");
+
+interface Review {
+  customerName: string;
+  reviewText: string;
+  reviewDate: string;
+}
+
+const reviewArr: Review[] = [];
+
+reviews.map((review) => {
+  const customerName = review.data.customerName;
+  const reviewText = review.data.reviewText;
+  const reviewDate = review.data.reviewDate.toLocaleDateString();
+
+  reviewArr.push({ customerName, reviewText, reviewDate });
+});
+---
+
+<div class="mt-24">
+  <h2 class="font-semibold text-3xl text-center">Reviews</h2>
+  <div class="flex flex-row p-6">
+    <ReviewCarousel reviews={reviewArr} client:load />
+  </div>
+</div>

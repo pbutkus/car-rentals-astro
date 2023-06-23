@@ -1,0 +1,29 @@
+---
+//@ts-ignore
+import { getCollection } from "astro:content";
+
+import PageLayout from "../../layouts/PageLayout.astro";
+import CarCard from "../../components/Cards/CarCard.astro";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("car-brand");
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+
+const brandCars = await getCollection("cars", ({ data }) => {
+  return (
+    data.make.toLowerCase().trim() === entry.data.title.toLowerCase().trim()
+  );
+});
+---
+
+<PageLayout>
+  <div class="flex flex-wrap gap-10 justify-center">
+    {brandCars.map((car) => <CarCard car={car} />)}
+  </div>
+</PageLayout>
