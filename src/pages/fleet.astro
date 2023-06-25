@@ -1,0 +1,18 @@
+---
+//@ts-ignore
+import { getCollection } from "astro:content";
+
+import PageLayout from "../layouts/PageLayout.astro";
+import CarCard from "../components/Cards/CarCard.astro";
+import Brands from "../components/Brands.astro";
+
+const cars = await getCollection("cars");
+---
+
+<PageLayout>
+  <h1 class="text-center font-semibold text-3xl mt-12">Our Fleet</h1>
+  <Brands />
+  <div class="flex flex-wrap gap-10 justify-center my-12">
+    {cars.map((car) => <CarCard car={car} />)}
+  </div>
+</PageLayout>

@@ -35,7 +35,7 @@ export default function ReviewCarousel({ reviews }) {
             firstPanelSize="200px"
           >
             {reviews.map((rev) => (
-              <div className="flex flex-col p-6 md:w-96 w-80 shadow-md border rounded-sm m-2">
+              <div className="flex flex-col p-6 md:w-96 w-80 shadow-md border rounded-sm m-2 bg-white">
                 <h3 className="font-semibold">{rev.customerName}</h3>
                 <p className={"font-light text-gray-700"}>{rev.reviewText}</p>
               </div>

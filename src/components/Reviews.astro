@@ -21,9 +21,9 @@ reviews.map((review) => {
 });
 ---
 
-<div class="mt-24">
-  <h2 class="font-semibold text-3xl text-center">Reviews</h2>
-  <div class="flex flex-row p-6">
+<div class="p-6 mt-6 bg-gray-50">
+  <h2 class="font-semibold text-3xl text-center mb-3">Reviews</h2>
+  <div class="flex flex-row">
     <ReviewCarousel reviews={reviewArr} client:load />
   </div>
 </div>

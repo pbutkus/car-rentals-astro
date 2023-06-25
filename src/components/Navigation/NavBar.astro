@@ -4,15 +4,18 @@ const identity = await getEntry("site-identity", "site-identity");
 ---
 
 <div class="sticky bg-zinc-950 text-gray-200">
-  <div class="flex flex-row py-4 px-12 justify-between items-center">
+  <div
+    class="flex flex-row py-4 px-12 justify-between items-center uppercase font-semibold tracking-tight"
+  >
     <div>
       <img class="h-10" src={identity.data.logo} alt={identity.data.title} />
     </div>
     <div>
       <ul class="inline-flex space-x-6">
         <li><a href="/">Home</a></li>
-        <li>Fleet</li>
+        <li><a href="/fleet">Fleet</a></li>
         <li>About Us</li>
+        <li><a href="/blog/1">Blog</a></li>
         <li>Contact Us</li>
       </ul>
     </div>
