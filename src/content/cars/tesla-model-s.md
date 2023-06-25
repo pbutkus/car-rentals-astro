@@ -9,5 +9,5 @@ transmission: Automatic
 fuel: Electric
 seats: 4
 price: 200
-thumbnail: /images/uploads/2023_tesla_s_seo.jpg
+thumbnail: /images/uploads/2023_tesla_s.jpg
 ---
