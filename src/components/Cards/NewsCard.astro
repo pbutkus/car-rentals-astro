@@ -23,10 +23,27 @@ const { card } = Astro.props;
     </div>
     <div class="flex flex-row px-4 pb-2 justify-between">
       <a
-        class="border-b-2 px-1 hover:border-red-700"
+        class="group flex flex-row gap-1 items-center px-1 full-article-btn text-red-800 hover:text-red-600"
         href={`/blog/post/${card.slug}`}
       >
-        Read full article
+        <span>Read full article</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          class="h-5 w-5"
+          ><path
+            id="arrow1"
+            class="transition-all duration-500 group-hover:translate-x-6 group-hover:opacity-0"
+            fill="currentColor"
+            d="M4 12h12.25L11 6.75l.66-.75l6.5 6.5l-6.5 6.5l-.66-.75L16.25 13H4v-1Z"
+          ></path>
+          <path
+            id="arrow2"
+            class="transition-all duration-500 -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+            fill="currentColor"
+            d="M4 12h12.25L11 6.75l.66-.75l6.5 6.5l-6.5 6.5l-.66-.75L16.25 13H4v-1Z"
+          ></path>
+        </svg>
       </a>
       <p class="text-gray-700">{card.publishingDate}</p>
     </div>

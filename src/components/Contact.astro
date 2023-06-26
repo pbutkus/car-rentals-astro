@@ -2,8 +2,8 @@
 import TextInput from "./Inputs/TextInput.astro";
 ---
 
-<div class="flex md:flex-row flex-col">
-  <div class="flex flex-col w-1/2 p-6 my-6">
+<div class="flex lg:flex-row flex-col justify-center gap-4">
+  <div class="flex flex-col p-6 my-6 justify-center items-center lg:w-1/2">
     <div>
       <h2 class="text-center font-semibold text-3xl mb-6">
         You can contact us here
@@ -30,10 +30,16 @@ import TextInput from "./Inputs/TextInput.astro";
     <div
       class="flex justify-center items-center align-middle h-full w-full bg-gray-200"
     >
-      <p class="font-light">GOOGLE MAPS PLACEHOLDER</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d140929.8331988421!2d-80.40025607067707!3d25.607286918242284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9c3c80af08e15%3A0xdc8e1183d87fc49f!2sZoo%20Miami!5e0!3m2!1sen!2slt!4v1687770434159!5m2!1sen!2slt"
+        class="h-full w-full"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
-  <div class="flex flex-col w-1/2 justify-center items-center">
+  <div class="flex flex-col justify-center items-center lg:w-1/2">
     <form
       class="flex flex-col gap-4 rounded-sm border p-6 my-6 shadow-2xl"
       action=""
