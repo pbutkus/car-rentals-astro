@@ -1,6 +1,8 @@
 ---
 import Footer from "../components/Footer.astro";
-import HomePageNav from "../components/Navigation/HomePageNav";
+import SecondaryPageNav from "../components/Navigation/SecondaryPageNav";
+
+const { navLink } = Astro.props;
 ---
 
 <html lang="en">
@@ -11,9 +13,9 @@ import HomePageNav from "../components/Navigation/HomePageNav";
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body>
+  <body class="opacity-10 transition-opacity">
     <header>
-      <HomePageNav client:only />
+      <SecondaryPageNav navLink={navLink} client:only="preact" />
     </header>
     <main>
       <slot />
@@ -23,3 +25,9 @@ import HomePageNav from "../components/Navigation/HomePageNav";
     </footer>
   </body>
 </html>
+
+<script>
+  window.onload = (event) => {
+    document.body.classList.remove("opacity-10");
+  };
+</script>

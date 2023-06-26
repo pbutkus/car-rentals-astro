@@ -2,7 +2,7 @@
 //@ts-ignore
 import { getCollection } from "astro:content";
 
-import PageLayout from "../../layouts/PageLayout.astro";
+import SecondaryPageLayout from "../../layouts/SecondaryPageLayout.astro";
 import CarCard from "../../components/Cards/CarCard.astro";
 
 export async function getStaticPaths() {
@@ -22,8 +22,8 @@ const brandCars = await getCollection("cars", ({ data }) => {
 });
 ---
 
-<PageLayout>
+<SecondaryPageLayout>
   <div class="flex flex-wrap gap-10 justify-center">
     {brandCars.map((car) => <CarCard car={car} />)}
   </div>
-</PageLayout>
+</SecondaryPageLayout>

@@ -1,6 +1,6 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
-import PageLayout from "../../layouts/PageLayout.astro";
+import SecondaryPageLayout from "../../layouts/SecondaryPageLayout.astro";
 
 //@ts-ignore
 export async function getStaticPaths({ paginate }) {
@@ -32,9 +32,9 @@ page.data.map((post: CollectionEntry<"blog">) => {
 });
 ---
 
-<PageLayout>
+<SecondaryPageLayout navLink="blog">
   <div>
-    <h1 class="font-semibold text-3xl text-center">Blog</h1>
+    <h1 class="font-semibold text-3xl text-center pt-24">Blog</h1>
     <div class="flex flex-col gap-6 m-12 px-48">
       {
         postArr.map((post) => (
@@ -55,4 +55,4 @@ page.data.map((post: CollectionEntry<"blog">) => {
       }
     </div>
   </div>
-</PageLayout>
+</SecondaryPageLayout>

@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
-import PageLayout from "../../../layouts/PageLayout.astro";
+import SecondaryPageLayout from "../../../layouts/SecondaryPageLayout.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");
@@ -16,17 +16,19 @@ const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 ---
 
-<PageLayout>
+<SecondaryPageLayout navLink="blog">
   <div
-    class="py-24 bg-center"
+    class="flex h-[70vh] bg-cover bg-top align-bottom"
     style={`background-image: url(${entry.data.featuredImage});`}
   >
-    <h1
-      class="text-center bg-white/75 py-12 text-3xl font-semibold"
-      style="text-wrap: balance;"
-    >
-      {entry.data.title}
-    </h1>
+    <div class="self-end w-full bg-white/75">
+      <h1 class="p-8 text-3xl font-semibold h-1/3" style="text-wrap: balance;">
+        {entry.data.title}
+      </h1>
+      <p class="px-8 pb-4 font-light">
+        {entry.data.publishingDate.toLocaleDateString()}
+      </p>
+    </div>
   </div>
   <div class="sm:px-24 px-12 whitespace-pre-line">
     <p class="text-lg">{entry.data.intro}</p>
@@ -36,4 +38,4 @@ const { Content, headings } = await entry.render();
       <Content />
     </div>
   </div>
-</PageLayout>
+</SecondaryPageLayout>

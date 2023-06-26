@@ -1,0 +1,27 @@
+.nav-transparent {
+  @apply sm:bg-gray-950/40;
+}
+
+.nav-nontransparent {
+  @apply sm:bg-gray-950;
+}
+
+.nav-link {
+  @apply text-gray-50 text-sm;
+}
+
+.active {
+  @apply border-b-2 border-red-600;
+}
+
+.inactive {
+  @apply hover:border-b-2 hover:border-red-700/70;
+}
+
+.mobile-active {
+  @apply bg-red-600;
+}
+
+.mobile-inactive {
+  @apply hover:bg-red-800;
+}

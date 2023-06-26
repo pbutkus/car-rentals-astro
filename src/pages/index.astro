@@ -1,5 +1,5 @@
 ---
-import PageLayout from "../layouts/PageLayout.astro";
+import HomePageLayout from "../layouts/HomePageLayout.astro";
 import Hero from "../components/Hero.astro";
 import AboutUs from "../components/AboutUs.astro";
 import ServicesAndFeatures from "../components/ServicesAndFeatures.astro";
@@ -10,10 +10,9 @@ import WhyChooseUs from "../components/WhyChooseUs.astro";
 import Reviews from "../components/Reviews.astro";
 import FAQ from "../components/FAQ.astro";
 import Brands from "../components/Brands.astro";
-import "@egjs/preact-flicking/dist/flicking.css";
 ---
 
-<PageLayout>
+<HomePageLayout>
   <Hero />
   <Brands />
   <FeaturedCars />
@@ -24,4 +23,4 @@ import "@egjs/preact-flicking/dist/flicking.css";
   <LatestNews />
   <FAQ />
   <Contact />
-</PageLayout>
+</HomePageLayout>
