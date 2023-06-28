@@ -23,7 +23,14 @@ const brandCars = await getCollection("cars", ({ data }) => {
 ---
 
 <SecondaryPageLayout>
-  <div class="flex flex-wrap gap-10 justify-center">
-    {brandCars.map((car) => <CarCard car={car} />)}
+  <div class="pt-24">
+    <div>
+      <h1 class="text-center text-3xl font-semibold">
+        {brandCars[0].data.make}
+      </h1>
+    </div>
+    <div class="flex flex-wrap gap-10 justify-center pt-6 pb-12">
+      {brandCars.map((car) => <CarCard car={car} />)}
+    </div>
   </div>
 </SecondaryPageLayout>

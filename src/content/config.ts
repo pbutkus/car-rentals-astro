@@ -22,6 +22,7 @@ const carsCollection = defineCollection({
     seats: z.number(),
     price: z.number(),
     thumbnail: z.string(),
+    galleryImages: z.array(z.string()),
   }),
 });
 

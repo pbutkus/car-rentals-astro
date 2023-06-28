@@ -1,5 +1,4 @@
 ---
-import Button from "../Button.astro";
 import Details from "./CarCardComponents/Details.astro";
 import Icon from "astro-icon";
 
@@ -28,9 +27,31 @@ const link = `/cars/${car.slug}`;
     >
   </div>
   <div class="flex flex-col text-zinc-900">
-    <h2 class="font-semibold text-lg text-center border-b border-zinc-300 p-2">
-      {fullCarName}
-    </h2>
+    <div class="font-semibold text-lg text-center border-b border-zinc-300 p-2">
+      <a
+        class="group flex flex-row justify-center items-center gap-2 w-full"
+        href={link}
+      >
+        <span>{fullCarName}</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          class="h-5 w-5"
+          ><path
+            id="arrow1"
+            class="transition-all duration-500 group-hover:translate-x-6 group-hover:opacity-0"
+            fill="currentColor"
+            d="M4 12h12.25L11 6.75l.66-.75l6.5 6.5l-6.5 6.5l-.66-.75L16.25 13H4v-1Z"
+          ></path>
+          <path
+            id="arrow2"
+            class="transition-all duration-500 -translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+            fill="currentColor"
+            d="M4 12h12.25L11 6.75l.66-.75l6.5 6.5l-6.5 6.5l-.66-.75L16.25 13H4v-1Z"
+          ></path>
+        </svg>
+      </a>
+    </div>
     <Details
       modelYear={car.data.modelYear}
       mileage={car.data.mileage}
