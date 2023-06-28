@@ -1,5 +1,5 @@
 import Flicking from "@egjs/preact-flicking";
-import { ViewportSlot } from "@egjs/preact-flicking";
+const { ViewportSlot } = Flicking;
 import "@egjs/preact-flicking/dist/flicking.css";
 import { Arrow } from "@egjs/flicking-plugins";
 import "@egjs/flicking-plugins/dist/arrow.css";
