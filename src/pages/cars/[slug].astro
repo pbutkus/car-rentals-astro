@@ -22,10 +22,12 @@ const { entry } = Astro.props;
     <h1 class="text-center font-semibold text-3xl pb-6">
       {entry.data.make + " " + entry.data.model}
     </h1>
-    <div class="flex flex-col bg-white mx-48 shadow-md">
-      <div class="flex flex-row-reverse shadow-md rounded-sm bg-white">
+    <div class="flex flex-col bg-white md:mx-48 shadow-md">
+      <div
+        class="flex flex-col lg:flex-row-reverse shadow-md rounded-sm bg-white"
+      >
         <CarGalleryCarousel client:load photos={entry.data.galleryImages} />
-        <div class="flex flex-row text-2xl justify-between p-6 px-12 w-3/5">
+        <div class="flex flex-row text-2xl justify-between p-6 px-12 lg:w-3/5">
           <table class="w-full">
             <tbody>
               <tr>
@@ -64,7 +66,7 @@ const { entry } = Astro.props;
           </table>
         </div>
       </div>
-      <div class="flex flex-col divide-x-2 py-2 lg:flex-row">
+      <div class="flex flex-col lg:divide-x-2 py-2 lg:flex-row">
         <div>
           <form class="flex flex-col gap-4 rounded-sm p-6" action="">
             <h2 class="text-center font-semibold text-3xl mb-6">Book Now</h2>
