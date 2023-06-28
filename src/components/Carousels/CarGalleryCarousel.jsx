@@ -8,21 +8,21 @@ export default function CarGalleryCarousel({ photos }) {
 
   return (
     <>
-      <div className="flex flex-row justify-center items-center w-full">
-        <div className={"w-5/6"}>
+      <div className="flex justify-center items-center w-full">
+        <div>
           <Flicking align="center" circular={true} plugins={_plugins}>
             {photos.map((photo) => (
-              <div className={"card-panel w-10/12 h-96"}>
+              <div className={"w-full h-auto"}>
                 <img
-                  className="pointer-events-none object-cover aspect-video"
+                  className="pointer-events-none object-cover aspect-video h-96 w-full"
                   src={photo}
                   alt="null"
                 />
               </div>
             ))}
             <ViewportSlot>
-              <span className="flicking-arrow-prev before:bg-white after:bg-white"></span>
-              <span className="flicking-arrow-next before:bg-white after:bg-white"></span>
+              <span className="flicking-arrow-prev is-thin hover:bg-white/90 bg-white/70 rounded-full before:bg-black after:bg-black transition"></span>
+              <span className="flicking-arrow-next is-thin hover:bg-white/90 bg-white/70 rounded-full before:bg-black after:bg-black transition"></span>
             </ViewportSlot>
           </Flicking>
         </div>

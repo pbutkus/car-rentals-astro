@@ -4,6 +4,7 @@ import { getCollection } from "astro:content";
 
 import SecondaryPageLayout from "../../layouts/SecondaryPageLayout.astro";
 import CarGalleryCarousel from "../../components/Carousels/CarGalleryCarousel";
+import TextInput from "../../components/Inputs/TextInput.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("cars");
@@ -17,10 +18,89 @@ const { entry } = Astro.props;
 ---
 
 <SecondaryPageLayout>
-  <div class="pt-24 pb-12">
+  <div class="pt-24 pb-12 bg-gray-50">
     <h1 class="text-center font-semibold text-3xl pb-6">
       {entry.data.make + " " + entry.data.model}
     </h1>
-    <CarGalleryCarousel client:load photos={entry.data.galleryImages} />
+    <div class="flex flex-col bg-white mx-48 shadow-md">
+      <div class="flex flex-row-reverse shadow-md rounded-sm bg-white">
+        <CarGalleryCarousel client:load photos={entry.data.galleryImages} />
+        <div class="flex flex-row text-2xl justify-between p-6 px-12 w-3/5">
+          <table class="w-full">
+            <tbody>
+              <tr>
+                <td class="font-light">Price per Day:</td>
+                <td class="font-semibold">{"$" + entry.data.price}</td>
+              </tr>
+              <tr>
+                <td class="font-light">Make:</td>
+                <td class="font-semibold">{entry.data.make}</td>
+              </tr>
+              <tr>
+                <td class="font-light">Model:</td>
+                <td class="font-semibold">{entry.data.model}</td>
+              </tr>
+              <tr>
+                <td class="font-light">Model Year:</td>
+                <td class="font-semibold">{entry.data.modelYear}</td>
+              </tr>
+              <tr>
+                <td class="font-light">Mileage:</td>
+                <td class="font-semibold">{entry.data.mileage}</td>
+              </tr>
+              <tr>
+                <td class="font-light">Seats:</td>
+                <td class="font-semibold">{entry.data.seats}</td>
+              </tr>
+              <tr>
+                <td class="font-light">Transmission:</td>
+                <td class="font-semibold">{entry.data.transmission}</td>
+              </tr>
+              <tr>
+                <td class="font-light">Fuel Type:</td>
+                <td class="font-semibold">{entry.data.fuel}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="flex flex-col divide-x-2 py-2 lg:flex-row">
+        <div>
+          <form class="flex flex-col gap-4 rounded-sm p-6" action="">
+            <h2 class="text-center font-semibold text-3xl mb-6">Book Now</h2>
+            <div class="flex md:flex-row flex-col gap-4">
+              <TextInput type="text" name="first-name" label="First name:" />
+              <TextInput type="text" name="last-name" label="Last name:" />
+            </div>
+            <TextInput type="text" name="email" label="Email:" />
+            <TextInput type="text" name="phone-number" label="Phone number:" />
+            <div class="flex flex-row gap-4">
+              <TextInput type="date" name="date-from" label="Date from:" />
+              <TextInput type="date" name="date-to" label="Date to:" />
+            </div>
+            <button
+              class="bg-red-700 text-white py-2 rounded-sm hover:bg-red-800 transition"
+              type="submit">Submit</button
+            >
+          </form>
+        </div>
+        <div
+          class="flex flex-col justify-center items-center w-full gap-4 px-8"
+        >
+          <a
+            class="bg-green-600 hover:bg-green-700 transition text-white text-xl py-3 w-full text-center"
+            href="#">Whatsapp</a
+          >
+          <a
+            class="bg-red-700 hover:bg-red-800 transition text-white text-xl py-3 w-full text-center"
+            href="#">Phone</a
+          >
+          <a
+            class="bg-red-700 hover:bg-red-800 transition text-white text-xl py-3 w-full text-center"
+            href="#">Email</a
+          >
+        </div>
+      </div>
+    </div>
   </div>
 </SecondaryPageLayout>
