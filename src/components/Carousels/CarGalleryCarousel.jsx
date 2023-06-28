@@ -1,6 +1,7 @@
-import Flicking, { ViewportSlot } from "@egjs/preact-flicking";
+import Flicking from "@egjs/preact-flicking";
+import { ViewportSlot } from "@egjs/preact-flicking";
 import "@egjs/preact-flicking/dist/flicking.css";
-import { Arrow, Fade } from "@egjs/flicking-plugins";
+import { Arrow } from "@egjs/flicking-plugins";
 import "@egjs/flicking-plugins/dist/arrow.css";
 
 export default function CarGalleryCarousel({ photos }) {
