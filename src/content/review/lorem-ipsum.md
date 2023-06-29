@@ -1,7 +1,5 @@
 ---
-customerName: "Lorem Ipsum #3"
-reviewText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-  ullamcorper turpis ac lacus euismod, eu aliquam erat ornare. Fusce volutpat
-  magna volutpat odio aliquam imperdiet. Quisque at orci eu turpis.
+customerName: Johnathan
+reviewText: I think it was an excellent service, will definitely rent again
 reviewDate: 2023-06-22T11:51:14.682Z
 ---
