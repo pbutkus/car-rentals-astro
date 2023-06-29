@@ -18,7 +18,6 @@ export default class CarGalleryCarousel extends Component {
   }
 
   componentDidMount() {
-    console.log(this.carouselContainerRef.current.clientWidth);
     this.setState({
       imgWidth: this.carouselContainerRef.current.clientWidth + 10,
     });
@@ -104,7 +103,6 @@ export default class CarGalleryCarousel extends Component {
                   this.state.prevClass
                 }
                 src={this.props.photos[this.state.prevIndex]}
-                alt="null"
                 width="1500px"
               />
               <img
@@ -113,7 +111,6 @@ export default class CarGalleryCarousel extends Component {
                   this.state.currentClass
                 }
                 src={this.props.photos[this.state.currentIndex]}
-                alt="null"
                 width="1500px"
               />
               <img
@@ -122,7 +119,6 @@ export default class CarGalleryCarousel extends Component {
                   this.state.nextClass
                 }
                 src={this.props.photos[this.state.nextIndex]}
-                alt="null"
                 width="1500px"
               />
               <button
