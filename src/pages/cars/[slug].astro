@@ -26,7 +26,7 @@ const { entry } = Astro.props;
       <div
         class="flex flex-col lg:flex-row-reverse shadow-md rounded-sm bg-white"
       >
-        <CarGalleryCarousel client:load photos={entry.data.galleryImages} />
+        <CarGalleryCarousel client:only photos={entry.data.galleryImages} />
         <div class="flex flex-row text-2xl justify-between p-6 px-12 lg:w-3/5">
           <table class="w-full">
             <tbody>
