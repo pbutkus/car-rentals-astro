@@ -91,15 +91,17 @@ const { entry } = Astro.props;
         >
           <a
             class="bg-green-600 hover:bg-green-700 transition text-white text-xl py-3 w-full text-center"
-            href="#">Whatsapp</a
+            href=`https://wa.me/13053220522?text=I am interested in renting ${entry.data.make + " " + entry.data.model}`
+            >Whatsapp</a
           >
           <a
             class="bg-red-700 hover:bg-red-800 transition text-white text-xl py-3 w-full text-center"
-            href="#">Phone</a
+            href="tel:13053220522">Phone</a
           >
           <a
             class="bg-red-700 hover:bg-red-800 transition text-white text-xl py-3 w-full text-center"
-            href="#">Email</a
+            href=`mailto:email@example.com?subject=I am interested in renting ${entry.data.make + " " + entry.data.model}`
+            >Email</a
           >
         </div>
       </div>
