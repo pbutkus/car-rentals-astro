@@ -1,7 +1,7 @@
 ---
 title: Lamborghini Aventador
-make: x
-model: x
+make: Lamborghini
+model: Aventador
 modelYear: 2017
 mileage: 1
 engineSize: 1
