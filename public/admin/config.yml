@@ -97,7 +97,8 @@ collections:
         name: "galleryImages"
         widget: "list"
         summary: "{{fields.image}}"
-        field: { label: "Image", name: "image", widget: "image", min: 3 }
+        min: 3
+        field: { label: "Image", name: "image", widget: "image" }
   - name: "carBrand"
     label: "Car Brand"
     folder: "src/content/car-brand"
