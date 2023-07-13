@@ -1,4 +1,4 @@
 ---
-title: Ferrari
+title: Ferarri
 logo: /images/uploads/ferrari.webp
 ---
