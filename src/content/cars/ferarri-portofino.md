@@ -1,6 +1,6 @@
 ---
-title: Ferarri Portofino
-make: Ferarri
+title: Ferrari Portofino
+make: Ferrari
 model: Portofino
 modelYear: 2017
 mileage: 1
