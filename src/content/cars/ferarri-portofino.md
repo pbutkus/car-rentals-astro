@@ -1,5 +1,5 @@
 ---
-title: Ferrari Portofino
+title: Ferarri Portofino
 make: Ferarri
 model: Portofino
 modelYear: 2017
