@@ -10,4 +10,6 @@ fuel: Petrol
 seats: 2
 price: 999
 thumbnail: /images/uploads/im-146731.jpeg
+galleryImages:
+  - /images/uploads/im-146731.jpeg
 ---
