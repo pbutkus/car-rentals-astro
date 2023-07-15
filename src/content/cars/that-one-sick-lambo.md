@@ -1,6 +1,6 @@
 ---
-title: Ferarri 488 GTB
-make: Ferarri
+title: Ferrari 488 GTB
+make: Ferrari
 model: 488 GTB
 modelYear: 2022
 mileage: 1111
